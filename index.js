@@ -1,12 +1,12 @@
 const express = require('express')
-const videoCompressing = require('video-compressor')
+const videoCompressor = require('video-compressor')
 const fileUpload = require('express-fileupload')
 const app = express()
 const port = 3000
 const input = "src/public";
 const ouput = "src/public/videos";
 
-videoCompressing(input,ouput)
+videoCompressor(input,ouput)
 
 app.use(fileUpload({
   createParentPath: true
